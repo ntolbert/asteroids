@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # boot.dev / logger info
-game_state.jsonl/ 
+game_state.jsonl 
