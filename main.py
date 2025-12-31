@@ -30,7 +30,7 @@ def main():
         screen.fill("black")
         for obj in drawable:
             obj.draw(screen) 
-            pygame.display.flip()
+        pygame.display.flip()
        
         #print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
         #print(f"Screen width: {SCREEN_WIDTH}")
