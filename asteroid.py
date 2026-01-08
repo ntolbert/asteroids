@@ -22,9 +22,13 @@ class Asteroid(CircleShape):
             return
         log_event("asteroid_split")
         new_angel = random.uniform(20,50)
-        first_ast_rot = self.velocity.rotate 
-        sec_ast_rot = self.velocity.rotate(-1)
+        print(f"new_angel:",new_angel)
+        first_ast_rot = pygame.math.Vector2.rotate(self.velocity,new_angel)
+        print("first_ast_rot",first_ast_rot)
+        sec_ast_rot =  pygame.math.Vector2.rotate(-self.velocity,-new_angel) 
+        print("sec_ast_rot :",sec_ast_rot)
         self.radius = self.radius - ASTEROID_MIN_RADIUS
+        print(self.radius)
         Asteroid(self.position,new_angel,new_angel)        
 
 
